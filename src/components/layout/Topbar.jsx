@@ -4,7 +4,7 @@ import { Bell, Moon, Search, UserCircle } from "lucide-react";
 // Receives the page title and a callback to toggle the mobile sidebar.
 export default function Topbar({ onMenuClick, title, isSidebarOpen }) {
   return (
-    <header className="sticky top-0 z-30 flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 bg-slate-100/90 px-4 py-3 backdrop-blur md:flex-nowrap md:px-6">
+    <header className="sticky top-0 z-30 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 bg-slate-100/90 px-4 py-3 backdrop-blur md:flex-nowrap md:px-6">
       <div className="flex w-full items-center gap-3 md:w-auto">
         <button
           className="inline-flex h-10 w-10 flex-col items-center justify-center gap-1 rounded-xl border border-slate-200 bg-white md:hidden"
@@ -22,7 +22,7 @@ export default function Topbar({ onMenuClick, title, isSidebarOpen }) {
       </div>
 
       <div className="flex w-full items-center justify-between gap-3 md:w-auto">
-        <div className="relative w-full md:w-64">
+        <div className="relative w-full max-w-xs md:w-64">
           <Search
             size={16}
             className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
@@ -36,7 +36,7 @@ export default function Topbar({ onMenuClick, title, isSidebarOpen }) {
           />
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <button
             className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
             type="button"

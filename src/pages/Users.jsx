@@ -97,12 +97,10 @@ export default function Users() {
           <p className="text-sm text-slate-500">Manage all registered users</p>
         </div>
 
-        <button className="bg-teal-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-teal-700">
-          Add User
-        </button>
+        
       </header>
 
-      <div className="border border-gray-200 rounded-xl bg-white p-4">
+      <div className="border border-gray-200 rounded-xl bg-white p-4 overflow-x-auto">
         {usersStatus === "loading" ? (
           <Loader message="Loading users..." />
         ) : usersError ? (

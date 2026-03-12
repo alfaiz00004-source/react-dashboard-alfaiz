@@ -103,7 +103,7 @@ export default function Analytics() {
       {/* Analytics Overview */}
       <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
         <div className="border border-gray-200 rounded-xl bg-white p-4">
-          <h3 className="text-base font-bold mb-3">Traffic Overview</h3>
+        
 
           
             <div className="grid gap-5">
@@ -113,7 +113,7 @@ export default function Analytics() {
         </div>
 
         <div className="border border-gray-200 rounded-xl bg-white p-4">
-          <h3 className="text-base font-bold mb-3">Sales Performance</h3>
+          
 
           
             <OrderStatusChart data={orderStatusData} title='Order Status Distribution'/>

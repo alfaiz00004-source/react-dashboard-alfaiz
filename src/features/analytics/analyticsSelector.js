@@ -27,9 +27,11 @@ const parseAmount = (amount) => {
 export const selectTotalRevenue = createSelector(
   [ordersSelector],
   (orders) =>
-    orders.reduce(
-      (total, order) => total + parseAmount(order.amount),
-      0
+    Math.floor(
+      orders.reduce(
+        (total, order) => total + parseAmount(order.amount),
+        0
+      )
     )
 );
 

@@ -34,17 +34,17 @@ export default function DashboardLayout() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-100 text-slate-900 md:flex">
+    <div className="flex min-h-screen bg-slate-100 text-slate-900">
       <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
 
-      <div className="flex min-h-screen min-w-0 flex-1 flex-col">
+      <div className="flex min-h-screen min-w-0 flex-1 flex-col overflow-hidden">
         <Topbar
           title={title}
           isSidebarOpen={isSidebarOpen}
           onMenuClick={() => setSidebarOpen((prev) => !prev)}
         />
 
-        <main className="flex-1 p-4 md:p-5">
+        <main className="flex-1 overflow-y-auto p-4 md:p-5">
           <div className="h-full rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5">
             <Outlet />
           </div>
